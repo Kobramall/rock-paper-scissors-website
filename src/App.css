@@ -46,6 +46,11 @@ body{
     justify-content: space-evenly;
 }
 
+.buttons button{
+    height: 15%;
+    width: 30%;
+}
+
 .playerInfo{
     display: flex;
     justify-content: center;
