@@ -1,10 +1,13 @@
 import React from "react";
 import { connect } from 'react-redux'
-import { AddScore, ChangeChoice, ChangepP2Choice, SetMessage } from "./Action";
-import rockImg from'./assets/rock.png'
-import scissorsImg from './assets/scissors.png'
-import paperImg from './assets/paper.png'
+import { ResetScore, AddScore, ChangeChoice, ChangepP2Choice, SetMessage } from "./Action";
+import rockP1Img from'./assets/rockP1.png'
+import scissorsP1Img from './assets/scissorsP1.png'
+import paperP1Img from './assets/paperP1.png'
 import './App.css';
+import rockP2Img from'./assets/rockP2.png'
+import scissorsP2Img from './assets/scissorsP2.png'
+import paperP2Img from './assets/paperP2.png'
 
 const App = (props) => {  
 
@@ -49,23 +52,23 @@ const App = (props) => {
         <h3>Player 2</h3>
       </div>
       <div className="pics">
-        <img src={props.p1Choice === "rock"? rockImg : props.p1Choice === "scissors" ? scissorsImg : paperImg }alt="rock" height="80" width="70"/>
+        <img src={props.p1Choice === "rock"? rockP1Img : props.p1Choice === "scissors" ? scissorsP1Img : paperP1Img }alt="rock" height="80" width="70"/>
         <p>{props.p1}</p> 
         <p>-</p>
         <p>{props.p2}</p>
-        <img src={ props.p2Choice === "scissors" ? scissorsImg : props.p2Choice === "rock" ? rockImg : paperImg} alt="rock" height="80" width="70"/>
+        <img src={ props.p2Choice === "scissors" ? scissorsP2Img : props.p2Choice === "rock" ? rockP2Img : paperP2Img} alt="rock" height="80" width="70"/>
       </div>
          <h2>{props.message}</h2>
          <div className="buttons">
             <button onClick={() => fight('rock') }>Rock</button>
-            <button onClick={() => fight('paper')}>Paper</button>
-            <button onClick={() => fight('scissors')}>Scissors</button>
+            <button onClick={() => fight('paper')}>Scissors</button>
+            <button onClick={() => fight('scissors')}>Paper</button>
          </div>
          <div className="playerInfo">
-
+           <button onClick={() => props.ResetScore()}>Reset</button>
          </div>
          <footer>
-
+              <a href="https://github.com/Kobramall/rock-paper-scissors-website">Check Out The Code Here</a>
          </footer>
     </div>
   );
@@ -81,4 +84,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { AddScore, ChangeChoice, ChangepP2Choice, SetMessage})(App);
+export default connect(mapStateToProps, { ResetScore, AddScore, ChangeChoice, ChangepP2Choice, SetMessage})(App);

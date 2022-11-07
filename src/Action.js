@@ -3,6 +3,7 @@ export const ADD_TO_P2_SCORE = 'ADD_TO_P2_SCORE'
 export const CHANGE_P1_CHOICE = 'CHANGE_P1_CHOICE'
 export const CHANGE_P2_CHOICE = 'CHANGE_P2_CHOICE'
 export const SET_MESSAGE = 'SET_MESSAGE'
+export const RESET_SCORE = 'RESET_SCORE'
 
 export const  AddScore = (num) => {
     if(num === 0)
@@ -23,4 +24,8 @@ export const ChangepP2Choice = (str) => {
 
 export const SetMessage = (str) =>{
     return({type:SET_MESSAGE, payload:str})
+}
+
+export const ResetScore = () =>{
+    return{ type: RESET_SCORE}
 }

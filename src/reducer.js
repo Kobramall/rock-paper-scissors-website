@@ -1,4 +1,4 @@
-import { ADD_TO_P1_SCORE, ADD_TO_P2_SCORE, CHANGE_P1_CHOICE, CHANGE_P2_CHOICE, SET_MESSAGE } from "./Action"
+import { RESET_SCORE, ADD_TO_P1_SCORE, ADD_TO_P2_SCORE, CHANGE_P1_CHOICE, CHANGE_P2_CHOICE, SET_MESSAGE } from "./Action"
 
 const intitalState = {
   p1: 0,
@@ -24,6 +24,9 @@ export const reducer = (state = intitalState, action) => {
         
     case SET_MESSAGE:
         return{...state, message:action.payload}
+
+    case RESET_SCORE:
+        return{...state, p1: 0, p2: 0, message:""} 
 
     default:
         return state;
