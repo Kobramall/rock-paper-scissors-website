@@ -52,11 +52,11 @@ const App = (props) => {
         <h3>Player 2</h3>
       </div>
       <div className="pics">
-        <img src={props.p1Choice === "rock"? rockP1Img : props.p1Choice === "scissors" ? scissorsP1Img : paperP1Img }alt="rock" height="80" width="70"/>
+        <img src={props.p1Choice === "rock"? rockP1Img : props.p1Choice === "scissors" ? scissorsP1Img : paperP1Img }alt="rock" height="30%" width="20%"/>
         <p>{props.p1}</p> 
         <p>-</p>
         <p>{props.p2}</p>
-        <img src={ props.p2Choice === "scissors" ? scissorsP2Img : props.p2Choice === "rock" ? rockP2Img : paperP2Img} alt="rock" height="80" width="70"/>
+        <img src={ props.p2Choice === "scissors" ? scissorsP2Img : props.p2Choice === "rock" ? rockP2Img : paperP2Img} alt="rock" height="30%" width="20%"/>
       </div>
          <h2>{props.message}</h2>
          <div className="buttons">
