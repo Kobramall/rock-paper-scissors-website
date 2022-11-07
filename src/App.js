@@ -61,8 +61,8 @@ const App = (props) => {
          <h2>{props.message}</h2>
          <div className="buttons">
             <button onClick={() => fight('rock') }>Rock</button>
-            <button onClick={() => fight('paper')}>Scissors</button>
-            <button onClick={() => fight('scissors')}>Paper</button>
+            <button onClick={() => fight('scissors')}>Scissors</button>
+            <button onClick={() => fight('paper')}>Paper</button>
          </div>
          <div className="playerInfo">
            <button onClick={() => props.ResetScore()}>Reset</button>
